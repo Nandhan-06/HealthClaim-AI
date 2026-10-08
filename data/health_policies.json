@@ -1,0 +1,47 @@
+{
+  "POL1001": {
+    "member_id": "MEM001", "member_age": 34,
+    "sum_insured": 500000, "sum_insured_used_ytd": 120000,
+    "policy_start_date": "2024-01-10", "policy_status": "active",
+    "network_copay_pct": 10, "out_of_network_copay_pct": 25,
+    "room_rent_cap_pct_of_si_per_day": 1.0,
+    "pre_auth_required_procedures": ["PR-CARDIAC-BYPASS", "PR-JOINT-REPLACEMENT", "PR-CANCER-CHEMO"],
+    "excluded_conditions": ["DX-COSMETIC", "DX-INFERTILITY"],
+    "ped_waiting_period_months": 24,
+    "claim_submission_window_days": 30
+  },
+  "POL1002": {
+    "member_id": "MEM002", "member_age": 68,
+    "sum_insured": 300000, "sum_insured_used_ytd": 280000,
+    "policy_start_date": "2023-06-01", "policy_status": "active",
+    "network_copay_pct": 20, "out_of_network_copay_pct": 35,
+    "room_rent_cap_pct_of_si_per_day": 1.0,
+    "pre_auth_required_procedures": ["PR-CARDIAC-BYPASS", "PR-JOINT-REPLACEMENT", "PR-CANCER-CHEMO"],
+    "excluded_conditions": ["DX-COSMETIC", "DX-INFERTILITY", "DX-MATERNITY"],
+    "ped_waiting_period_months": 24,
+    "claim_submission_window_days": 30
+  },
+  "POL1003": {
+    "member_id": "MEM003", "member_age": 29,
+    "sum_insured": 200000, "sum_insured_used_ytd": 0,
+    "policy_start_date": "2026-08-20", "policy_status": "active",
+    "network_copay_pct": 10, "out_of_network_copay_pct": 25,
+    "room_rent_cap_pct_of_si_per_day": 1.0,
+    "pre_auth_required_procedures": ["PR-CARDIAC-BYPASS", "PR-JOINT-REPLACEMENT", "PR-CANCER-CHEMO"],
+    "excluded_conditions": ["DX-COSMETIC", "DX-INFERTILITY"],
+    "ped_waiting_period_months": 24,
+    "claim_submission_window_days": 30
+  },
+  "POL1004": {
+    "member_id": "MEM004", "member_age": 45,
+    "sum_insured": 1000000, "sum_insured_used_ytd": 50000,
+    "policy_status": "lapsed",
+    "policy_start_date": "2022-01-01",
+    "network_copay_pct": 10, "out_of_network_copay_pct": 25,
+    "room_rent_cap_pct_of_si_per_day": 1.0,
+    "pre_auth_required_procedures": ["PR-CARDIAC-BYPASS", "PR-JOINT-REPLACEMENT", "PR-CANCER-CHEMO"],
+    "excluded_conditions": ["DX-COSMETIC"],
+    "ped_waiting_period_months": 24,
+    "claim_submission_window_days": 30
+  }
+}

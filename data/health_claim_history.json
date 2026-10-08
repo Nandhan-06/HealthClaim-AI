@@ -1,0 +1,9 @@
+{
+  "MEM001": [
+    {"claim_id": "CLM9001", "date_of_service": "2026-03-12", "procedure_code": "PR-APPENDECTOMY", "amount": 60000, "status": "approved"}
+  ],
+  "MEM002": [
+    {"claim_id": "CLM9002", "date_of_service": "2026-07-01", "procedure_code": "PR-CATARACT", "amount": 45000, "status": "approved"},
+    {"claim_id": "CLM9003", "date_of_service": "2026-08-15", "procedure_code": "PR-CATARACT", "amount": 45000, "status": "approved"}
+  ]
+}

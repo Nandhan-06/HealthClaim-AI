@@ -1,0 +1,6 @@
+{
+  "Apollo Hospital":        {"network": "in_network",     "fraud_flag": false},
+  "Fortis Healthcare":      {"network": "in_network",     "fraud_flag": false},
+  "CityCare Clinic":        {"network": "out_of_network", "fraud_flag": true},
+  "Sunrise Multispecialty": {"network": "out_of_network", "fraud_flag": false}
+}

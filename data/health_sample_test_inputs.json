@@ -1,0 +1,132 @@
+[
+  {
+    "id": "TC01",
+    "description": "Clean approval - happy path",
+    "claim": {
+      "claim_id": "CLM2001", "member_id": "MEM001", "policy_number": "POL1001",
+      "diagnosis_code": "DX-APPENDICITIS", "procedure_code": "PR-APPENDECTOMY",
+      "claim_type": "cashless", "admission_type": "emergency",
+      "provider_name": "Apollo Hospital",
+      "date_of_admission": "2026-09-01", "date_of_discharge": "2026-09-04",
+      "claim_amount_requested": 65000, "room_rent_per_day": 4500,
+      "documents_submitted": ["discharge_summary", "bills", "prescription"]
+    }
+  },
+  {
+    "id": "TC02",
+    "description": "Waiting period not yet cleared + missing pre-auth",
+    "claim": {
+      "claim_id": "CLM2002", "member_id": "MEM003", "policy_number": "POL1003",
+      "diagnosis_code": "DX-ORTHO", "procedure_code": "PR-JOINT-REPLACEMENT",
+      "claim_type": "reimbursement", "admission_type": "planned",
+      "provider_name": "Fortis Healthcare",
+      "date_of_admission": "2026-09-10", "date_of_discharge": "2026-09-14",
+      "claim_amount_requested": 180000, "room_rent_per_day": 5000,
+      "documents_submitted": ["discharge_summary", "bills"]
+    }
+  },
+  {
+    "id": "TC03",
+    "description": "Room rent over cap - proportionate deduction",
+    "claim": {
+      "claim_id": "CLM2003", "member_id": "MEM001", "policy_number": "POL1001",
+      "diagnosis_code": "DX-CARDIAC", "procedure_code": "PR-ANGIOPLASTY",
+      "claim_type": "cashless", "admission_type": "emergency",
+      "provider_name": "Apollo Hospital",
+      "date_of_admission": "2026-09-05", "date_of_discharge": "2026-09-08",
+      "claim_amount_requested": 250000, "room_rent_per_day": 9000,
+      "documents_submitted": ["discharge_summary", "bills", "prescription"]
+    }
+  },
+  {
+    "id": "TC04",
+    "description": "Senior citizen + near-exhausted sum insured",
+    "claim": {
+      "claim_id": "CLM2004", "member_id": "MEM002", "policy_number": "POL1002",
+      "diagnosis_code": "DX-EYE", "procedure_code": "PR-CATARACT",
+      "claim_type": "cashless", "admission_type": "planned",
+      "provider_name": "Apollo Hospital",
+      "date_of_admission": "2026-09-02", "date_of_discharge": "2026-09-02",
+      "claim_amount_requested": 50000, "room_rent_per_day": 3000,
+      "documents_submitted": ["discharge_summary", "bills"]
+    }
+  },
+  {
+    "id": "TC05",
+    "description": "Duplicate claim flag",
+    "claim": {
+      "claim_id": "CLM2005", "member_id": "MEM002", "policy_number": "POL1002",
+      "diagnosis_code": "DX-EYE", "procedure_code": "PR-CATARACT",
+      "claim_type": "cashless", "admission_type": "planned",
+      "provider_name": "Apollo Hospital",
+      "date_of_admission": "2026-08-16", "date_of_discharge": "2026-08-16",
+      "claim_amount_requested": 45000, "room_rent_per_day": 3000,
+      "documents_submitted": ["discharge_summary", "bills"]
+    }
+  },
+  {
+    "id": "TC06",
+    "description": "Lapsed policy - should reject immediately",
+    "claim": {
+      "claim_id": "CLM2006", "member_id": "MEM004", "policy_number": "POL1004",
+      "diagnosis_code": "DX-CARDIAC", "procedure_code": "PR-CARDIAC-BYPASS",
+      "claim_type": "cashless", "admission_type": "emergency",
+      "provider_name": "Fortis Healthcare",
+      "date_of_admission": "2026-09-03", "date_of_discharge": "2026-09-10",
+      "claim_amount_requested": 400000, "room_rent_per_day": 6000,
+      "documents_submitted": ["discharge_summary", "bills", "prescription"]
+    }
+  },
+  {
+    "id": "TC07",
+    "description": "Missing documents - should downgrade, not reject",
+    "claim": {
+      "claim_id": "CLM2007", "member_id": "MEM001", "policy_number": "POL1001",
+      "diagnosis_code": "DX-ORTHO", "procedure_code": "PR-FRACTURE-REPAIR",
+      "claim_type": "reimbursement", "admission_type": "emergency",
+      "provider_name": "Apollo Hospital",
+      "date_of_admission": "2026-09-01", "date_of_discharge": "2026-09-03",
+      "claim_amount_requested": 70000, "room_rent_per_day": 4000,
+      "documents_submitted": ["bills"]
+    }
+  },
+  {
+    "id": "TC08",
+    "description": "Fraud-flagged / out-of-network provider",
+    "claim": {
+      "claim_id": "CLM2008", "member_id": "MEM003", "policy_number": "POL1003",
+      "diagnosis_code": "DX-CARDIAC", "procedure_code": "PR-ANGIOPLASTY",
+      "claim_type": "reimbursement", "admission_type": "emergency",
+      "provider_name": "CityCare Clinic",
+      "date_of_admission": "2026-09-15", "date_of_discharge": "2026-09-18",
+      "claim_amount_requested": 150000, "room_rent_per_day": 4000,
+      "documents_submitted": ["discharge_summary", "bills", "prescription"]
+    }
+  },
+  {
+    "id": "TC09",
+    "description": "Medical necessity mismatch",
+    "claim": {
+      "claim_id": "CLM2009", "member_id": "MEM001", "policy_number": "POL1001",
+      "diagnosis_code": "DX-APPENDICITIS", "procedure_code": "PR-CANCER-CHEMO",
+      "claim_type": "cashless", "admission_type": "planned",
+      "provider_name": "Apollo Hospital",
+      "date_of_admission": "2026-09-06", "date_of_discharge": "2026-09-09",
+      "claim_amount_requested": 300000, "room_rent_per_day": 4000,
+      "documents_submitted": ["discharge_summary", "bills", "prescription"]
+    }
+  },
+  {
+    "id": "TC10",
+    "description": "Excluded condition",
+    "claim": {
+      "claim_id": "CLM2010", "member_id": "MEM001", "policy_number": "POL1001",
+      "diagnosis_code": "DX-COSMETIC", "procedure_code": "PR-COSMETIC-SURGERY",
+      "claim_type": "reimbursement", "admission_type": "planned",
+      "provider_name": "Apollo Hospital",
+      "date_of_admission": "2026-09-20", "date_of_discharge": "2026-09-21",
+      "claim_amount_requested": 100000, "room_rent_per_day": 4000,
+      "documents_submitted": ["discharge_summary", "bills"]
+    }
+  }
+]
